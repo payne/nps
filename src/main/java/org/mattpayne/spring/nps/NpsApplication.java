@@ -16,7 +16,7 @@ public class NpsApplication {
         SpringApplication.run(NpsApplication.class, args);
     }
 
-/*
+
     @Bean
     public JobDetail jobDetail() {
         return JobBuilder.newJob().ofType(SampleJob.class)
@@ -35,6 +35,7 @@ public class NpsApplication {
                 .build();
     }
 
+    /*
     @Bean
     public Scheduler scheduler(Trigger trigger, JobDetail job, SchedulerFactoryBean factory)
             throws SchedulerException {
@@ -43,5 +44,9 @@ public class NpsApplication {
         scheduler.start();
         return scheduler;
     }
-*/
+
+     */
+
 }
+
+

@@ -14,7 +14,7 @@ public class SampleJob implements Job {
 
     public void execute(JobExecutionContext context) throws JobExecutionException {
         //jobService.executeSampleJob();
-        System.out.println("Sample Job");
+        System.out.println("Sample Job " + new java.util.Date());
     }
 }
 
