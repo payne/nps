@@ -16,7 +16,7 @@ public class NpsApplication {
         SpringApplication.run(NpsApplication.class, args);
     }
 
-
+/*
     @Bean
     public JobDetail jobDetail() {
         return JobBuilder.newJob().ofType(SampleJob.class)
@@ -43,5 +43,5 @@ public class NpsApplication {
         scheduler.start();
         return scheduler;
     }
-
+*/
 }
