@@ -16,7 +16,6 @@ public class NpsApplication {
         SpringApplication.run(NpsApplication.class, args);
     }
 
-
     @Bean
     public JobDetail jobDetail() {
         return JobBuilder.newJob().ofType(SampleJob.class)
@@ -31,22 +30,9 @@ public class NpsApplication {
         return TriggerBuilder.newTrigger().forJob(job)
                 .withIdentity("Qrtz_Trigger")
                 .withDescription("Sample trigger")
-                .withSchedule(simpleSchedule().repeatForever().withIntervalInSeconds(5))
+                .withSchedule(simpleSchedule().repeatForever().withIntervalInSeconds(60))
                 .build();
     }
-
-    /*
-    @Bean
-    public Scheduler scheduler(Trigger trigger, JobDetail job, SchedulerFactoryBean factory)
-            throws SchedulerException {
-        Scheduler scheduler = factory.getScheduler();
-        scheduler.scheduleJob(job, trigger);
-        scheduler.start();
-        return scheduler;
-    }
-
-     */
-
 }
 
 
