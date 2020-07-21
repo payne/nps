@@ -13,7 +13,11 @@ import static org.quartz.SimpleScheduleBuilder.simpleSchedule;
 public class NpsApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(NpsApplication.class, args);
+        try {
+            SpringApplication.run(NpsApplication.class, args);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Bean
